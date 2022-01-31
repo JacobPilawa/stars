@@ -1,0 +1,874 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Virial Theorem and the Equation of State &#8212; Stellar Astrophysics</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Hydrostatic Equilibrium: A Deep Dive" href="hydrostaticequilibrium.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Stellar Astrophysics</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="broadoverview.html">
+   Broad Overview of the Class
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="hydrostaticequilibrium.html">
+   Hydrostatic Equilibrium: A Deep Dive
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Virial Theorem and the Equation of State
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/pages/equationsofstate.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fpages/equationsofstate.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#virial-theorem">
+   Virial Theorem
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#application-of-the-virial-theorem">
+     Application of the Virial Theorem
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#problem-1">
+       Problem 1
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#problem-2">
+       Problem 2
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#problem-3">
+       Problem 3
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#equations-of-state">
+   Equations of State
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#radiation-dominated-example">
+     Radiation Dominated Example
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#microphysics-of-the-equations-of-state">
+     Microphysics of the Equations of State
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#an-example-ideal-gas">
+       An Example: Ideal Gas
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#kinetic-theory-of-pressure">
+     Kinetic Theory of Pressure
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#quantum-treatment">
+     Quantum Treatment
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#fermions">
+       Fermions
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#bosons-photons">
+       Bosons (photons)
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#degenerate-non-relativistic-electron-gas">
+       Degenerate , Non-Relativistic Electron Gas
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#degenerate-relativistic-electron-case">
+       Degenerate, Relativistic Electron Case
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#plot">
+     Plot
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#relativistic-transition">
+       Relativistic Transition
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#degeneracy-transition-for-electrons">
+       Degeneracy Transition FOR ELECTRONS
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Virial Theorem and the Equation of State</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#virial-theorem">
+   Virial Theorem
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#application-of-the-virial-theorem">
+     Application of the Virial Theorem
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#problem-1">
+       Problem 1
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#problem-2">
+       Problem 2
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#problem-3">
+       Problem 3
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#equations-of-state">
+   Equations of State
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#radiation-dominated-example">
+     Radiation Dominated Example
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#microphysics-of-the-equations-of-state">
+     Microphysics of the Equations of State
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#an-example-ideal-gas">
+       An Example: Ideal Gas
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#kinetic-theory-of-pressure">
+     Kinetic Theory of Pressure
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#quantum-treatment">
+     Quantum Treatment
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#fermions">
+       Fermions
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#bosons-photons">
+       Bosons (photons)
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#degenerate-non-relativistic-electron-gas">
+       Degenerate , Non-Relativistic Electron Gas
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#degenerate-relativistic-electron-case">
+       Degenerate, Relativistic Electron Case
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#plot">
+     Plot
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#relativistic-transition">
+       Relativistic Transition
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#degeneracy-transition-for-electrons">
+       Degeneracy Transition FOR ELECTRONS
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="virial-theorem-and-the-equation-of-state">
+<h1>Virial Theorem and the Equation of State<a class="headerlink" href="#virial-theorem-and-the-equation-of-state" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="virial-theorem">
+<h2>Virial Theorem<a class="headerlink" href="#virial-theorem" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>This is basically the energy form of hydrostatic equilibrium:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+\frac{dP}{dr} = -\frac{Gm(r) \rho(r)}{r^2}
+\]</div>
+<p>We will multiply by <span class="math notranslate nohighlight">\(\frac43 \pi r^3\)</span> and integrate:</p>
+<div class="math notranslate nohighlight">
+\[
+\int \frac43 \pi r^3 \frac{dP}{dr} \mathrm{d}r = -\int \frac{Gm(r)\rho(r)}{r^2} \frac43 \pi r^3 \, \mathrm{d}r
+\]</div>
+<p>What do we integrate? Pressures on the left, and radii on the right.</p>
+<div class="math notranslate nohighlight">
+\[
+\int_{P_{center}}^{P_{surface}} \frac43 \pi r^3 \frac{dP}{dr} \mathrm{d}r = -\int_{0}^{R} \frac{Gm(r)\rho(r)}{r^2} \frac43 \pi r^3 \, \mathrm{d}r
+\]</div>
+<p>Replacing <span class="math notranslate nohighlight">\(dm\)</span> Integrating the right hand side:</p>
+<div class="math notranslate nohighlight">
+\[
+\mathrm{d}m = 4\pi r^2 \, \mathrm{d}r \rho(r)
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+-\frac{1}{3}\int  \frac{GM}{r}\mathrm{d}m  = \frac13 \Omega, 
+\]</div>
+<p><strong>where <span class="math notranslate nohighlight">\(\Omega\)</span> is the gravitational potential energy.</strong> Note that we absorbed the negative sign based on the definition of gravitational potential.</p>
+<p>What about the left hand side? We need to consider the pressure at the center and the surface. We have with integration by parts:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac43 \pi r^3 P\Bigg|_{center}^{surface} - \int_0^R P \cdot \frac43 \pi r^2 \mathrm{d}r
+\]</div>
+<p>What does this equation mean? We have a volume times a pressure in the first term, and this whole term (either pressure or volume) causes this term to go to zero. The second term is the same thing as a volume integral of pressure:</p>
+<div class="math notranslate nohighlight">
+\[
+-\int_0^{V_{surface}} P \mathrm{d}V \equiv -\langle P \rangle V
+\]</div>
+<p>We can now combine the left and right hand sides:</p>
+<div class="math notranslate nohighlight">
+\[
+-\frac13 \Omega = -\langle P \rangle V \rightarrow \boxed{\Omega = -3 \langle P \rangle V}
+\]</div>
+<p>We often see the virial theorem written as:</p>
+<div class="math notranslate nohighlight">
+\[
+\boxed{\Omega = -2K}
+\]</div>
+<p>It is really easy to measure the kinetic energy of systems, making this equation really powerful!</p>
+<p>There are some things to remember:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(\Omega &lt; 0\)</span>.</p></li>
+<li><p>Total Energy is composed of <span class="math notranslate nohighlight">\(E_{tot} = K + \Omega\)</span></p></li>
+</ul>
+<div class="section" id="application-of-the-virial-theorem">
+<h3>Application of the Virial Theorem<a class="headerlink" href="#application-of-the-virial-theorem" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="problem-1">
+<h4>Problem 1<a class="headerlink" href="#problem-1" title="Permalink to this headline">¶</a></h4>
+<p>Problem: A gas cloud (assume Jeans unstable). What happens when the cloud radiates a bit of heat away?</p>
+<p>Assume equilibrium:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac13 \Omega = -P V 
+\]</div>
+<p>Since we are not losing mass, the gravitationa pressure increases. The cloud tries to restore equilibirum. To do this, the internal temperature has to increase.</p>
+<div class="math notranslate nohighlight">
+\[
+U = -\frac35 \frac{GM^2}{R}
+\]</div>
+<p>Basically, the sequence goes as follows:</p>
+<ol class="simple">
+<li><p>Lose energy: <span class="math notranslate nohighlight">\(L\)</span> gets radiated away. This causes the total energy to decrease, and the absolute value of energy increases.</p></li>
+<li><p>As a result, <span class="math notranslate nohighlight">\(K\)</span> has to increase, and thus so does <span class="math notranslate nohighlight">\(T\)</span>.</p></li>
+<li><p>We then loop around, and we keep gaining temperture until <span class="math notranslate nohighlight">\(T\)</span> gets hot for fusion.</p></li>
+</ol>
+</div>
+<div class="section" id="problem-2">
+<h4>Problem 2<a class="headerlink" href="#problem-2" title="Permalink to this headline">¶</a></h4>
+<p>What is the difference between a bomb and a star?</p>
+<ol class="simple">
+<li><p>For stars, <span class="math notranslate nohighlight">\(M\)</span> is big enough.</p></li>
+<li><p>Remember that gravitational potentail energy is negative, so the radius is increasing until the temperature settles back down.</p></li>
+<li><p>For a bomb, the everything happens so quickly that it overcomes the potential energy holding the bomb togther.</p></li>
+<li><p>Beforehand, we were viralized. After, we are super virialized, and we have an explosion!</p></li>
+</ol>
+</div>
+<div class="section" id="problem-3">
+<h4>Problem 3<a class="headerlink" href="#problem-3" title="Permalink to this headline">¶</a></h4>
+<p>How do we estimate the temperature of the center of a star?</p>
+<div class="math notranslate nohighlight">
+\[ 
+\boxed{T = \frac{GMm_p}{Rk} }
+\]</div>
+</div>
+</div>
+</div>
+<div class="section" id="equations-of-state">
+<h2>Equations of State<a class="headerlink" href="#equations-of-state" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="radiation-dominated-example">
+<h3>Radiation Dominated Example<a class="headerlink" href="#radiation-dominated-example" title="Permalink to this headline">¶</a></h3>
+<p>What if we are out of the ideal gas regime? Let’s examine some non-ideal equations of state!</p>
+<p>1. Blackbody Photon Energy Density <span class="math notranslate nohighlight">\(\mathcal{E}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\mathcal{E} = a T^{4} 
+\]</div>
+<p>From the virial theorem:
+$<span class="math notranslate nohighlight">\(
+P = \frac13 \mathcal{E} 
+\)</span>$</p>
+<p>Let’s assume hydrostatic equilibrium:</p>
+<div class="math notranslate nohighlight">
+\[
+P_{rad} = -\frac13 \frac{\Omega}{V} \rightarrow  P = \frac13 \frac{GM}{r } \rho
+\]</div>
+<p>If our pressure is dominated by photons, we can equate these pressures.</p>
+<div class="math notranslate nohighlight">
+\[
+aT^4 = \frac{1}{3} \frac{GM}{r} \rho
+\]</div>
+<p>Also remember:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{kT}{\mu m_P} = \frac{GM}{3R} \rightarrow \boxed{T = \frac{GM \mu m_p}{3k_bR}}
+\]</div>
+<p>Pluggin this in just as we become super virial, we have:</p>
+<div class="math notranslate nohighlight">
+\[
+a \left(\frac{GM \mu m_p}{3k_bR}\right)^{4} \geq \frac{GM^2}{R^4}
+\]</div>
+<p>Solving this for <span class="math notranslate nohighlight">\(M\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+M^2 = \frac{k^4}{aG^3 \left(\mu m_p\right)^{4}}\rightarrow \boxed{M \approx 100M_\odot}
+\]</div>
+<p>**We become radiation dominated around M&gt;<span class="math notranslate nohighlight">\(100M_\odot\)</span> **</p>
+<p>A more accurate treatment gives you something like <span class="math notranslate nohighlight">\(M\sim 50M_\odot\)</span>. In this regime, stars respond fundamentally in a different way and must be treated as such. But, remember, different parts of the star can have different forms of pressure dominated.</p>
+</div>
+<div class="section" id="microphysics-of-the-equations-of-state">
+<h3>Microphysics of the Equations of State<a class="headerlink" href="#microphysics-of-the-equations-of-state" title="Permalink to this headline">¶</a></h3>
+<div class="admonition-equation-of-state admonition">
+<p class="admonition-title">Equation of State</p>
+<p>The microphysical properties of a material that tells us how to relate density <span class="math notranslate nohighlight">\(\rho\)</span>, temperture <span class="math notranslate nohighlight">\(T\)</span>, compositions <span class="math notranslate nohighlight">\(X_i\)</span>, and more, to the pressure <span class="math notranslate nohighlight">\(P(\rho, T, X_i, ...)\)</span> and internal energy <span class="math notranslate nohighlight">\(U = U(\rho, T, X_i, ...)\)</span>.</p>
+<p>Given <span class="math notranslate nohighlight">\(P\)</span> and <span class="math notranslate nohighlight">\(U\)</span>, we can determine the specific heats <span class="math notranslate nohighlight">\(C_V\)</span> and <span class="math notranslate nohighlight">\(C_P\)</span>, adiabatic exponents <span class="math notranslate nohighlight">\(\gamma_{ad}\)</span>, adiabatic temperature gradient <span class="math notranslate nohighlight">\(\nabla_{ad}\)</span> (convective versus radiative transport), and more.</p>
+</div>
+<div class="section" id="an-example-ideal-gas">
+<h4>An Example: Ideal Gas<a class="headerlink" href="#an-example-ideal-gas" title="Permalink to this headline">¶</a></h4>
+<p>The equation of state we use most frequently:
+$<span class="math notranslate nohighlight">\(
+\boxed{P = nkT  = \frac{\rho}{\mu m_p} kT} 
+\)</span>$</p>
+<p>But, where does this come from? We must know the answer to find out when this does not apply. Everything we will cover here is in the Phillips textbook, in Chapter 2.</p>
+</div>
+</div>
+<div class="section" id="kinetic-theory-of-pressure">
+<h3>Kinetic Theory of Pressure<a class="headerlink" href="#kinetic-theory-of-pressure" title="Permalink to this headline">¶</a></h3>
+<p>Where does the ideal gas equation come from? Formally, we can say (with <span class="math notranslate nohighlight">\(p\)</span> as momentum state, <span class="math notranslate nohighlight">\(n_p(p)\)</span> is the distribution of momenta, <span class="math notranslate nohighlight">\(\epsilon_p\)</span> is the kinetic enegy of a particle, and <span class="math notranslate nohighlight">\(v_p\)</span> is the velocity of the particle) the number density is:</p>
+<div class="math notranslate nohighlight">
+\[
+n = \int_0^\infty n_p(p) \,\mathrm{d}p
+\]</div>
+<p>The internal energy density is:</p>
+<div class="math notranslate nohighlight">
+\[
+U = \int n_p(p) \epsilon_p \,\mathrm{d}p = n \langle \epsilon_p \rangle
+\]</div>
+<p>The pressure is:</p>
+<div class="math notranslate nohighlight">
+\[
+P = \frac13 \int p v_p n_p(p) \, \mathrm{d}p
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+P = \frac13 n \langle p v_p \rangle
+\]</div>
+<p>We now need to discuss relativity! Recall that we can relate <span class="math notranslate nohighlight">\(v_p\)</span>, <span class="math notranslate nohighlight">\(p\)</span>, and <span class="math notranslate nohighlight">\(\epsilon_p\)</span> with special relativity. The total energy <span class="math notranslate nohighlight">\(\epsilon^2\)</span> is:</p>
+<div class="math notranslate nohighlight">
+\[
+\epsilon^2 = p^2 c^2 + m^2 c^4 
+\]</div>
+<p>The kinetic energy piece is:</p>
+<div class="math notranslate nohighlight">
+\[
+\epsilon_p = \epsilon - mc^2
+\]</div>
+<p>The velocity <span class="math notranslate nohighlight">\(v_p\)</span> is:</p>
+<div class="math notranslate nohighlight">
+\[
+v_p = \frac{\partial \epsilon}{\partial p} = \frac{pc^2}{\epsilon}
+\]</div>
+<p>**The Non-Relativitic Case: **</p>
+<div class="math notranslate nohighlight">
+\[
+p \ll mc
+\]</div>
+<p>In this case, we have:</p>
+<div class="math notranslate nohighlight">
+\[
+\epsilon_p = \frac12 \frac{p^2}{m}
+\]</div>
+<p>Plugging this expression into our equations for pressure:</p>
+<div class="math notranslate nohighlight">
+\[
+P = \frac13 n \langle  pv \rangle  \rightarrow \langle  pv \rangle = \langle \frac{p^2}{m} \rangle = 2\langle\epsilon_p\rangle 
+\]</div>
+<p>Thus, we have:</p>
+<div class="math notranslate nohighlight">
+\[
+\boxed{P = \frac{2}{3} U = \frac{2}{3}\frac{u}{\rho}}
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(u\)</span> can be the internal energy per particle, whereas <span class="math notranslate nohighlight">\(U\)</span> is the internal energy for the whole system. <span class="math notranslate nohighlight">\(U\)</span> has units of energy per volume, whereas <span class="math notranslate nohighlight">\(u\)</span> has units of energy per unit mass.</p>
+<hr class="docutils" />
+<p><strong>The Extremely-Relativistic Case:</strong></p>
+<p>Here,</p>
+<div class="math notranslate nohighlight">
+\[
+p \gg mc
+\]</div>
+<p>Now, we have:</p>
+<div class="math notranslate nohighlight">
+\[
+\epsilon_p = pc \rightarrow v_p = c
+\]</div>
+<p>Our nasty term <span class="math notranslate nohighlight">\(\langle pv \rangle \rightarrow \langle pc \rangle\)</span>. This is the same as <span class="math notranslate nohighlight">\(\epsilon_p\)</span>. Pushing this back through, we have:</p>
+<div class="math notranslate nohighlight">
+\[
+\boxed{P = \frac{1}{3} U = \frac{1}{3}\rho u}
+\]</div>
+<p>We already have a factor of <span class="math notranslate nohighlight">\(2\)</span> difference in pressure between the non-relativistic and relativistic case.</p>
+<p>Where do we see extremely relativistic conditions?</p>
+<ul class="simple">
+<li><p>Anytime we are radiation dominated, the most appropriate equation of state to use is the relativist case!</p></li>
+<li><p>It turns out this is the case for both photon pressure and electron pressure. Also surprisingly true when we have ions supporting the pressure.</p></li>
+<li><p>Most of the time, however, we use <span class="math notranslate nohighlight">\(P = \frac23 U\)</span> for the equation of state.</p></li>
+</ul>
+<hr class="docutils" />
+<p><strong>Classical, Ideal Gas Case</strong></p>
+<p>For a classical, ideal gas in <strong>local thermodynamic equilibrium</strong>, we can write down the Maxwell-Boltzmann distribution:</p>
+<div class="math notranslate nohighlight">
+\[
+n(p) \mathrm{d}p = \frac{n}{\left(2\pi mkT\right)^{3/2}} \underbrace{e^{\frac{-p^2}{2mkT}}}_{=e^{-\epsilon_p/kT}} \cdot 4\pi p^2 \mathrm{d}p
+\]</div>
+<p>The last term is the volume in momentum phase space. The first term is a normalization constant. This can also be thought of as an equilibrium state of a gas!</p>
+<p>This is a totally nasty equation, so how do we arrive at the ideal gas law? We plug in the non-relativistic equations we found above:</p>
+<div class="math notranslate nohighlight">
+\[
+v = \frac{p}{m}
+\]</div>
+<p>Plugging this in and integrating the pressure, we find:</p>
+<div class="math notranslate nohighlight">
+\[
+P = \frac13 \frac{1}{(2\pi m kT)^{3/2}} \int e^{-\frac{p^2}{2mkT}} 4\pi p^2 \,\mathrm{d}p
+\]</div>
+<p>Integrating, we find:</p>
+<div class="math notranslate nohighlight">
+\[
+\boxed{P = nkT}
+\]</div>
+<p>When is this valid?</p>
+<ul class="simple">
+<li><p>For non-relativistic cases. Also, however, true for “classical” relativistic particles.</p></li>
+</ul>
+<p>We also will typically used the mixed species equation, which is:</p>
+<div class="math notranslate nohighlight">
+\[
+\boxed{P = \frac{\rho}{\mu m_p} kT}
+\]</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="quantum-treatment">
+<h3>Quantum Treatment<a class="headerlink" href="#quantum-treatment" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="fermions">
+<h4>Fermions<a class="headerlink" href="#fermions" title="Permalink to this headline">¶</a></h4>
+<p>The limit on the number of states is set by the Pauli exclusion principle. Let’s start with the fermion case (electrons, nucleons). Here, we care about the fraction of particles at energy <span class="math notranslate nohighlight">\(\mathcal{E_p}\)</span>. This leads to the <strong>Fermi-Dirac distribution</strong>:</p>
+<div class="math notranslate nohighlight">
+\[
+f_{FD}(\mathcal{E}_p): = \frac{1}{e^{\frac{\epsilon_p - \epsilon}{kT}} + 1} \leq 1
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(\epsilon\)</span> is the <strong>“chemical potential”</strong>. What does this  look like:</p>
+<a class="reference internal image-reference" href="../_images/fd.png"><img alt="fig9" class="align-center" src="../_images/fd.png" style="width: 600px;" /></a>
+</div>
+<div class="section" id="bosons-photons">
+<h4>Bosons (photons)<a class="headerlink" href="#bosons-photons" title="Permalink to this headline">¶</a></h4>
+<p>Here, we have a similar result, the <strong>Bose-Einstein distribution</strong>:</p>
+<div class="math notranslate nohighlight">
+\[
+f_{BE}(\mathcal{E}_p): = \frac{1}{e^{\frac{\epsilon_p - \epsilon}{kT}} - 1} \leq 1
+\]</div>
+<p>To go from <span class="math notranslate nohighlight">\(\epsilon_p\)</span> to <span class="math notranslate nohighlight">\(p\)</span> is: <span class="math notranslate nohighlight">\(f_{BE} \cdot N_{allowed states}\)</span>. We start with the maximum allowed number of quantum states per volume (where <span class="math notranslate nohighlight">\(g_s\)</span> is the max number of states per particle):</p>
+<div class="math notranslate nohighlight">
+\[
+\text{max number of quantum states per volume}  = g(p)\,\mathrm{d}p = g_s \frac{V}{h^3} 4\pi p^2 \, \mathrm{d}p
+\]</div>
+</div>
+<div class="section" id="degenerate-non-relativistic-electron-gas">
+<h4>Degenerate , Non-Relativistic Electron Gas<a class="headerlink" href="#degenerate-non-relativistic-electron-gas" title="Permalink to this headline">¶</a></h4>
+<p>Here, we have fermions with two states (spin-up and spin-down), so <span class="math notranslate nohighlight">\(g_s = 2\)</span>. We also have fully degernate case:</p>
+<div class="math notranslate nohighlight">
+\[
+N_{e,p} = \frac{2V}{h^3} 4\pi p^2 \mathrm{d}p
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+n(p) \mathrm{d}p = \frac{2}{h^3} 4\pi p^2 \mathrm{d}p 
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+n = \int_0^{p_F} n(p) \mathrm{d}p = n_e
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(p_F\)</span> is the maximum allowed momentum for a fermion. Turns out that:</p>
+<div class="math notranslate nohighlight">
+\[
+p_F = h\left(\frac{3}{8\pi} n_e\right)^{1/3}
+\]</div>
+<p>which we can use as our integration bound.</p>
+<p>We also want to compute the pressure. We have to do non-relativistic and relativistic here, where <span class="math notranslate nohighlight">\(v = \frac{p}{m}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+P = \frac13 \int p v n(p) \mathrm{d}p
+\]</div>
+<p>After all the algebra, we have the equation of state for a degenerate gas of electrons (fully):</p>
+<div class="math notranslate nohighlight">
+\[
+\boxed{P = \mathcal{K}_{NR} \left(\frac{\rho}{\mu_e}\right)^{5/3} \text{ where } n_e \equiv \frac{\rho}{\mu_e m_p}}
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mathcal{K} = 1.0036\times 10^{13} \frac{\text{dyne}}{\text{cm}^2} \left(\frac{g}{cm^3}\right)^{-5/3}\)</span>. <strong>This is the presure for a non-relativistic, degenerate electron gas</strong>. The only way that we get a truly, boxy FD distribution is for <span class="math notranslate nohighlight">\(T=0\)</span>, so this is not an exact result.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In a normal star, we can use ideal gases. It is only at really high densities (white dwarf, neutron star, molecular parts of outer stars, SN explosions) do we have degenerate behavior/quantum behavior.</p>
+</div>
+</div>
+<div class="section" id="degenerate-relativistic-electron-case">
+<h4>Degenerate, Relativistic Electron Case<a class="headerlink" href="#degenerate-relativistic-electron-case" title="Permalink to this headline">¶</a></h4>
+<p>This is all the same, but we have to plug in <span class="math notranslate nohighlight">\(v=c\)</span>.</p>
+<p>This gives:</p>
+<div class="math notranslate nohighlight">
+\[
+P_{e} = \mathcal{K}_{ER} \left(\frac{\rho}{\mu_e}\right)^{4/3}
+\]</div>
+<p>where  <span class="math notranslate nohighlight">\(\mathcal{K}_{ER} = 1.24\times 10^{15} \frac{\text{dyne}}{\text{cm}^2} \left(\frac{g}{cm^3}\right)^{-4/3}\)</span> .</p>
+</div>
+</div>
+<div class="section" id="plot">
+<h3>Plot<a class="headerlink" href="#plot" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="../_images/eos.png"><img alt="fig10" class="align-center" src="../_images/eos.png" style="width: 600px;" /></a>
+<div class="section" id="relativistic-transition">
+<h4>Relativistic Transition<a class="headerlink" href="#relativistic-transition" title="Permalink to this headline">¶</a></h4>
+<p>How do we identify the transition point between cases? Let’s try to calculate <span class="math notranslate nohighlight">\(\rho\)</span> where <span class="math notranslate nohighlight">\(p \approx m_e c \sim h \left(\frac{3}{8\pi} n_e\right)^{1/3}\)</span> . This gives:</p>
+<div class="math notranslate nohighlight">
+\[
+\rho_{trans} \sim \mu_e m_p \frac{8\pi}{3} \left(\frac{m_e c}{h}\right)^{3}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\boxed{\frac{\rho_{trans}}{\mu_e} = 0.3\left(\frac{T}{10^{7} \text{ K}}\right)\frac{\text{g}}{\text{cm}^3}}
+\]</div>
+<p>When we are working this degenerate gas, it depends on if we have a hot or cool object! Thus, for NSs and WDs, the transition region is very different as a function of age.</p>
+</div>
+<div class="section" id="degeneracy-transition-for-electrons">
+<h4>Degeneracy Transition FOR ELECTRONS<a class="headerlink" href="#degeneracy-transition-for-electrons" title="Permalink to this headline">¶</a></h4>
+<p>How do we determine the transition point from degenerate to non-degenerate? Crudely, we have:</p>
+<div class="math notranslate nohighlight">
+\[
+P_e = max\left(\underbrace{\frac{\rho kT}{\mu_e m_p}}_\text{thermal pressure}, \underbrace{\mathcal{K}_{NR} \left(\frac{\rho}{\mu_e}\right)^{5/3}}_\text{degeneracy pressure}\right)
+\]</div>
+<p>The  transition point is when these are both <span class="math notranslate nohighlight">\(\sim\)</span> equal. Doing this and solving for <span class="math notranslate nohighlight">\(\rho\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\rho}{\mu_e} = \frac{\mathcal{R}}{\mathcal{K}_{NR} T}^{3/2}
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(\mathcal{R} \equiv \frac{k}{m_p}\)</span>. Plugging in numbers, we have:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\rho}{\mu_e} \approx 750 \frac{\text{g}}{\text{cm}^3} \left(\frac{T}{10^7 \text{ K}}\right)^{3/2}
+\]</div>
+<p>We can add this to our diagram, with an example of where WDs might fall:</p>
+<a class="reference internal image-reference" href="../_images/wd_eos_example.png"><img alt="fig11" class="align-center" src="../_images/wd_eos_example.png" style="width: 600px;" /></a>
+</div>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./pages"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="hydrostaticequilibrium.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Hydrostatic Equilibrium: A Deep Dive</p>
+        </div>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Jacob Pilawa<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

@@ -2,7 +2,7 @@
 # Learn more at https://jupyterbook.org/customize/config.html
 
 title: Stellar Astrophysics
-author: The Jupyter Book Community
+author: Jacob Pilawa
 logo: logo.png
 
 # Force re-execution of notebooks on each build.
