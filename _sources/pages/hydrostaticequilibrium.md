@@ -191,3 +191,4 @@ $$
 
 
 For ionized hydrogen, $\mu = 1/2$, but for hydrogen and helium in cosmic abundance, we have $\mu = 0.62$. This changes the structure and radii big time of our stars around us! Microphysics has a huge macro-impact. 
+
