@@ -226,7 +226,7 @@ $$
 v_p = \frac{\partial \epsilon}{\partial p} = \frac{pc^2}{\epsilon}
 $$
 
-**The Non-Relativitic Case: **
+**The Non-Relativitic Case:**
 
 $$
 p \ll mc
@@ -247,7 +247,7 @@ $$
 Thus, we have:
 
 $$
-\boxed{P = \frac{2}{3} U = \frac{2}{3}\frac{u}{\rho}}
+\boxed{P = \frac{2}{3} U = \frac{2}{3}u\rho}
 $$
 
 where $u$ can be the internal energy per particle, whereas $U$ is the internal energy for the whole system. $U$ has units of energy per volume, whereas $u$ has units of energy per unit mass. 
