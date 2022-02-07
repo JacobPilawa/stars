@@ -430,15 +430,6 @@ where  $\mathcal{K}_{ER} = 1.24\times 10^{15} \frac{\text{dyne}}{\text{cm}^2} \l
 
 
 
-### Plot
-
-```{image} ../figures/eos.png
-:alt: fig10
-:width: 600px
-:align: center
-```
-
-
 
 #### Relativistic Transition 
 
@@ -487,3 +478,62 @@ We can add this to our diagram, with an example of where WDs might fall:
 
 
 
+
+#### Relativistic Bosons
+
+Let's start with momentum distributions:
+
+$$
+n(p) dp = \frac{2}{h^3}\frac{1}{e^{-\frac{\epsilon p}{kt}}-1}4\pi p^2 \mathrm{d}p
+$$
+
+
+
+Let's take the photon case, where $\epsilon = pc = h\nu$. In LTE, we have:
+
+$$
+n(\nu) d\nu = \frac{8\pi}{c^3}\frac{\nu^2 d\nu}{e^{\frac{h\nu}{kT}} - 1}
+$$
+
+
+For photons, we find:
+
+$$
+n_{ph} = bT^3
+$$
+
+where $b = 20.3$ 1/(cm^3 K^3). 
+
+We also have the internal radiation energy:
+
+$$
+U_{rad} = aT^4
+$$
+
+And thus the radiation pressure is 
+
+$$
+P_{rad} = \frac13 aT^3
+$$
+
+where $a = \frac{8\pi^5 k^4}{15 h^2 c^3} = 7.6\times 10^{-15}$ ergs/cm^3/K^4. 
+
+We can now complete our diagram from last time:
+
+
+
+* Radiative pressure is more important for high mass stars
+* Low mass stars, you might have to worry about degeneracy pressure
+* Most stars are pretty much ideal gases.
+
+#### Why do we care about Equations of State/Pressure?
+
+The pressure is what holds up the star.
+
+### Plot
+
+```{image} ../figures/eos.png
+:alt: fig10
+:width: 600px
+:align: center
+```
