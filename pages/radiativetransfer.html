@@ -233,6 +233,55 @@
   <a class="reference internal nav-link" href="#a-treatment-of-stars">
    A Treatment of Stars
   </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-note-on-the-lagrangian-formalism">
+     A Note on the Lagrangian Formalism
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#combining-our-temperature-and-pressure-gradients-with-he">
+     Combining Our Temperature and Pressure Gradients with HE
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-note-on-rosseland-mean-opacity">
+     A Note on Rosseland Mean Opacity
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#electron-scattering">
+       Electron Scattering
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#free-free-absorption">
+       Free-Free Absorption
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#bound-free-ionization">
+       Bound-Free (Ionization)
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#h-opacity">
+       H- Opacity
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#other-opacity-molecules-and-dust">
+       Other Opacity: Molecules and Dust
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#convection">
+   Convection
+  </a>
  </li>
 </ul>
 
@@ -281,6 +330,55 @@
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#a-treatment-of-stars">
    A Treatment of Stars
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-note-on-the-lagrangian-formalism">
+     A Note on the Lagrangian Formalism
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#combining-our-temperature-and-pressure-gradients-with-he">
+     Combining Our Temperature and Pressure Gradients with HE
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#a-note-on-rosseland-mean-opacity">
+     A Note on Rosseland Mean Opacity
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#electron-scattering">
+       Electron Scattering
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#free-free-absorption">
+       Free-Free Absorption
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#bound-free-ionization">
+       Bound-Free (Ionization)
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#h-opacity">
+       H- Opacity
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#other-opacity-molecules-and-dust">
+       Other Opacity: Molecules and Dust
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#convection">
+   Convection
   </a>
  </li>
 </ul>
@@ -413,6 +511,116 @@ H = -\frac{4\pi}{3\rho} \frac{\partial T}{\partial z} \int_0^\infty \frac{1}{\ka
 \[
 \boxed{L(r) = -4\pi r^2 \frac{16 \sigma T^3}{3\kappa_R \rho}\frac{dT}{dz}}
 \]</div>
+<div class="section" id="a-note-on-the-lagrangian-formalism">
+<h3>A Note on the Lagrangian Formalism<a class="headerlink" href="#a-note-on-the-lagrangian-formalism" title="Permalink to this headline">¶</a></h3>
+<p>What if we want the temperature gradient in terms of mass instead of radius? We have:</p>
+<div class="math notranslate nohighlight">
+\[
+\boxed{\frac{dT}{dr} = \frac{-3}{16\sigma}\frac{\kappa \rho}{T^3}\frac{L(r)}{4\pi r^2}}
+\]</div>
+<p>We can also do this for mass:</p>
+<div class="math notranslate nohighlight">
+\[
+\boxed{\frac{dT}{dm} = \frac{-3}{16\sigma} \frac{\kappa_R}{T^3} \frac{L(r)}{\left(4\pi r^2\right)^2}}
+\]</div>
+<p>We can also think of this as (approximately):</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{dT}{dm} \propto L_{below} \kappa_R
+\]</div>
+</div>
+<div class="section" id="combining-our-temperature-and-pressure-gradients-with-he">
+<h3>Combining Our Temperature and Pressure Gradients with HE<a class="headerlink" href="#combining-our-temperature-and-pressure-gradients-with-he" title="Permalink to this headline">¶</a></h3>
+<p>Our temperature gradient is:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{dT}{dm} = \underbrace{\frac{dP}{dm}}_{\text{from HE, }=\frac{GM}{4\pi r^2}}\frac{dT}{dP} 
+\]</div>
+<p>Substitute in:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{dT}{dm} = -\frac{Gm}{4\pi r^4} \frac{T}{P}\frac{\mathrm{d}\ln T}{\mathrm{d}\ln P}
+\]</div>
+<p>We will define a dimensionless quantity:</p>
+<div class="math notranslate nohighlight">
+\[
+\nabla_\text{rad}\equiv \left(\frac{\partial \ln T}{\partial \ln P}\right)_\text{rad}
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+\nabla_\text{rad} = -\frac{P}{T}\frac{4\pi r^2}{Gm}\frac{3\kappa_R}{4ac \left(4\pi\right)^2}\frac{1}{T^3}\frac{L(r)}{r^4}
+\]</div>
+<p>We can simplify, giving:</p>
+<div class="math notranslate nohighlight">
+\[
+\boxed{\nabla_\text{rad} = \frac{3\kappa_R}{16\pi ac G}\frac{LP}{mT^4}}
+\]</div>
+<p>Conceptually, this is <strong>log variation of T with depth</strong>. Note that this still has an idela gas equation of state, but radiative diffusion is the dominant energy transport. This is subtle! Note that <span class="math notranslate nohighlight">\(\kappa_R\)</span> and convection vs. diffusion are the dominant differences in strucutre between high and low mass stars.</p>
+</div>
+<div class="section" id="a-note-on-rosseland-mean-opacity">
+<h3>A Note on Rosseland Mean Opacity<a class="headerlink" href="#a-note-on-rosseland-mean-opacity" title="Permalink to this headline">¶</a></h3>
+<p>What are some various <span class="math notranslate nohighlight">\(\kappa_R\)</span>’s?</p>
+<div class="section" id="electron-scattering">
+<h4>Electron Scattering<a class="headerlink" href="#electron-scattering" title="Permalink to this headline">¶</a></h4>
+<p>The general picture is that we have an ionized medium at low <span class="math notranslate nohighlight">\(\rho\)</span> and low <span class="math notranslate nohighlight">\(T\)</span>. We have to have electrons and thus have some ionization. A photon comes in and scatters off the electron, giving an opacity. Thomson scattering is non-relativistic (and an elastic scatter process). Compton is relaivistic.</p>
+<p>This happens in the outer envelopes of stars, with <span class="math notranslate nohighlight">\(T &gt; 10,000\)</span> K. We also need to have photons which are not relativistic – thus <span class="math notranslate nohighlight">\(h\nu &lt; 0.1 m_e c^2\)</span> or so, and so <span class="math notranslate nohighlight">\(T&lt;10^{8}\)</span> K or so. Note that this temperature range is basically the entire star, **so if we have to do first order calculations, we assume Thomson opacity and modify from there. **</p>
+<div class="math notranslate nohighlight">
+\[
+\sigma_T = 6.6\times 10^{-25} \text{cm}^2
+\]</div>
+<p>with <span class="math notranslate nohighlight">\(\kappa = \sigma_t/\mu m_p\)</span>.</p>
+<p>This gives</p>
+<div class="math notranslate nohighlight">
+\[
+\kappa_R = \frac{\sigma_T}{\mu m_{unit mass}} = 0.2\left(1+X\right) \text{ g }^{2} \text{ cm }^{-1}
+\]</div>
+</div>
+<div class="section" id="free-free-absorption">
+<h4>Free-Free Absorption<a class="headerlink" href="#free-free-absorption" title="Permalink to this headline">¶</a></h4>
+<p>I covered this. Make sure to go get the notes.</p>
+</div>
+<div class="section" id="bound-free-ionization">
+<h4>Bound-Free (Ionization)<a class="headerlink" href="#bound-free-ionization" title="Permalink to this headline">¶</a></h4>
+<p>Here, we have an atom with an electron bound. A photon comes in and makes it free. We thus need:</p>
+<div class="math notranslate nohighlight">
+\[
+E_{photon} &gt; E_{binding}
+\]</div>
+<p>Note that this is typically not hydrogen, but this is <strong>affecting the metals</strong>.</p>
+<div class="math notranslate nohighlight">
+\[
+\kappa_{BF} = 4.35\times 10^{25} g_{bf} Z(1+X)(\rho/\text{ g }\text{ cm}^3)(T/K)^{-7/2} cm^2/g
+\]</div>
+<p>Another thing to consider:</p>
+<div class="math notranslate nohighlight">
+\[
+\kappa_{bf} \sim 10^{3} Z \kappa_{ff}
+\]</div>
+<p>Bound free and free free happen, sort of, in the same regime because metals are typically 1% or so. We can’t have <span class="math notranslate nohighlight">\(T&gt;10^{4}\)</span> K or so, because we don’t want to be fully ionized. We also want a meatl reach environment, with something like <span class="math notranslate nohighlight">\(Z&gt;10^{-3}\)</span> or so.</p>
+</div>
+<div class="section" id="h-opacity">
+<h4>H- Opacity<a class="headerlink" href="#h-opacity" title="Permalink to this headline">¶</a></h4>
+<p>Note that in astronomy, we have a very weird ion. If we have an area of a lot of free electrons, and a really high density so that we can force the protons to hang out with the electrons.</p>
+<p>This is <strong><em>extremely</em></strong> fragile. Even though it is fragile – when it does exist, it has an opacity:</p>
+<div class="math notranslate nohighlight">
+\[
+\kappa_{H-} \sim 10^{-31} \left(\frac{Z}{0.02}\right)\rho^{1/2} T^{9} \frac{\text{cm}^2}{\text{g}}
+\]</div>
+<p>The opacity can SKYROCKET with high temperatures. This is most relevant for the outer parts of low mass stars. When the temperature is <span class="math notranslate nohighlight">\(T\gtrsim 3000-6000 \)</span> K, <strong>and</strong> when <span class="math notranslate nohighlight">\(T&lt;10,000\)</span> K (so we are not ionized), <strong>and</strong> when we have metals <span class="math notranslate nohighlight">\(Z\sim &gt; 10^{-2.5}\)</span>. In this regime, H- is a dominant form of opacity! Because this is the outermost layer, this <strong>is the regulating layer</strong>. Thus, what we are actually seeing is set byt he opacity at the outer layer.</p>
+</div>
+<div class="section" id="other-opacity-molecules-and-dust">
+<h4>Other Opacity: Molecules and Dust<a class="headerlink" href="#other-opacity-molecules-and-dust" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Relevant for really, really cool stars and in their outermost layers</p></li>
+<li><p>Relevant for star formation, not as much for main sequence and post-main sequence though.</p></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="convection">
+<h2>Convection<a class="headerlink" href="#convection" title="Permalink to this headline">¶</a></h2>
+<p>Consider a blob of gas with some radius <span class="math notranslate nohighlight">\(r\)</span>, some pressure <span class="math notranslate nohighlight">\(P(r)\)</span>, and some density <span class="math notranslate nohighlight">\(\rho(r)\)</span>. We will displace our blob of gas upward a bit, and see what happens. This radius is now <span class="math notranslate nohighlight">\(r+\mathrm{d}r\)</span>, and the ambient conditions of this blob are different – <span class="math notranslate nohighlight">\(P\rightarrow P(r+\mathrm{d}r)\)</span> and <span class="math notranslate nohighlight">\(\rho\rightarrow \rho(r+\mathrm{d}r)\)</span>. This is almost impossible to solve, unless we use the <strong>adiabatic assumption:</strong> <strong>assume that the gas responds in an adibatic way.</strong> This means we have <strong>no heat transfer in the star</strong>. We are assuming this locally, by the way, which is why this might seem counter intuitive. In other words, we are expanding this blob adiabatically – only changing the size of the blob.</p>
+<p>In this end, this will lead to an expression for <span class="math notranslate nohighlight">\(dP/dr\)</span> and <span class="math notranslate nohighlight">\(dT/dr\)</span> under these conditions, giving an equivalent <span class="math notranslate nohighlight">\(\nabla_{ad}\)</span>. We then compare the two gradients, and whichever is more efficient will win!</p>
 </div>
 </div>
 
