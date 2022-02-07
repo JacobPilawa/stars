@@ -7,3 +7,4 @@ chapters:
 - file: pages/broadoverview
 - file: pages/hydrostaticequilibrium
 - file: pages/equationsofstate
+- file: pages/radiativetransfer
