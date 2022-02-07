@@ -1,0 +1,472 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Energy Transport in Stars &#8212; Stellar Astrophysics</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"processClass": "tex2jax_process|mathjax_process|math|output_area"}})</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Virial Theorem and the Equation of State" href="equationsofstate.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Stellar Astrophysics</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../intro.html">
+   Introduction
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="broadoverview.html">
+   Broad Overview of the Class
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="hydrostaticequilibrium.html">
+   Hydrostatic Equilibrium: A Deep Dive
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="equationsofstate.html">
+   Virial Theorem and the Equation of State
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Energy Transport in Stars
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/pages/radiativetransfer.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fpages/radiativetransfer.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#radiation-transport">
+   Radiation Transport
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#radiative-transfer-refresher">
+     Radiative Transfer Refresher
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#absorption">
+       Absorption
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#emission">
+       Emission
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#a-treatment-of-stars">
+   A Treatment of Stars
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Energy Transport in Stars</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#radiation-transport">
+   Radiation Transport
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#radiative-transfer-refresher">
+     Radiative Transfer Refresher
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#absorption">
+       Absorption
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#emission">
+       Emission
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#a-treatment-of-stars">
+   A Treatment of Stars
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="energy-transport-in-stars">
+<h1>Energy Transport in Stars<a class="headerlink" href="#energy-transport-in-stars" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="radiation-transport">
+<h2>Radiation Transport<a class="headerlink" href="#radiation-transport" title="Permalink to this headline">¶</a></h2>
+<p>Consider a hot material (say, inside a star), with some boundary, and more gas on the other side of the boundary. The gas interior emits photons, some of which crossing the boundary. The gas outside the boundary is slightly cooler, and still emitting photons.</p>
+<p>How do we describe the photons and where they go? Because we have a temperature gradient, the photons are flowing from interior to exterior the boundary. We can think of this movement as a diffusion – in reality, <strong>it is not the same photon random walking, but we will treat it as such.</strong></p>
+<div class="section" id="radiative-transfer-refresher">
+<h3>Radiative Transfer Refresher<a class="headerlink" href="#radiative-transfer-refresher" title="Permalink to this headline">¶</a></h3>
+<p>We care about two basic properties of the photons and the material:</p>
+<ul class="simple">
+<li><p>Intensity of the radiation</p></li>
+<li><p>Matter opacity (absorbativity/transparency).</p></li>
+</ul>
+<p>We can define our specific intensity <span class="math notranslate nohighlight">\(I(\theta)\mathrm{d}\theta\)</span>, where <span class="math notranslate nohighlight">\(\theta\)</span> is the direction of radiation and <span class="math notranslate nohighlight">\(\mathrm{d}\Omega\)</span> is the solid angle over which the photon is emitted:</p>
+<div class="math notranslate nohighlight">
+\[
+I(\theta) = \frac{\text{erg}}{\text{s cm}^2 \text{ str Hz}}
+\]</div>
+<p>We want to relate our flux to our specific intensity:</p>
+<div class="math notranslate nohighlight">
+\[
+F = \int I \cos\theta \mathrm{d}\Omega = \int_0^{2\pi} \int_{0}^{\pi} I(\theta, \phi)\cos\theta \cdot \sin\theta \mathrm{d}\theta\mathrm{d}\phi
+\]</div>
+<div class="section" id="absorption">
+<h4>Absorption<a class="headerlink" href="#absorption" title="Permalink to this headline">¶</a></h4>
+<p>What we really care about is the actually observed flux, and we must account for the opacity <span class="math notranslate nohighlight">\(\kappa\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[
+\kappa = \frac{\text{cm}^2}{g}
+\]</div>
+<p>You can think of this as a <strong>per-mass cross section.</strong></p>
+<p>We can write our equation of radiative transfer thus us:</p>
+<div class="math notranslate nohighlight">
+\[
+\mathrm{d}I = -I \kappa \rho \mathrm{d}s
+\]</div>
+<p>The initial intensity is modulated by the opacity and the thickness.</p>
+<p>We can solve:</p>
+<div class="math notranslate nohighlight">
+\[
+\boxed{I = I_0 e^{-\kappa \rho s}}
+\]</div>
+<p>We will commonly see something called <span class="math notranslate nohighlight">\(\tau \equiv \kappa \rho s\)</span>, which is the <strong>optical depth</strong>.</p>
+</div>
+<div class="section" id="emission">
+<h4>Emission<a class="headerlink" href="#emission" title="Permalink to this headline">¶</a></h4>
+<p>What happens if our slab is actually emitting more than it absorbs? We have some slab emission rate <span class="math notranslate nohighlight">\(j_\nu\)</span>. Note that:</p>
+<div class="math notranslate nohighlight">
+\[
+[j_\nu] = \frac{\text{ergs}}{\text{s cm}^3 \text{ sr Hz}}
+\]</div>
+<p>This modifies our radiation equation and we instead have:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{\mathrm{d}I}{\mathrm{d}s} = - I \kappa \rho + j
+\]</div>
+<p>Often, we see:</p>
+<div class="math notranslate nohighlight">
+\[
+\boxed{\frac{dI}{d\tau} = - I + S \text{ where } j_\nu \equiv \frac{j}{\kappa \rho}}
+\]</div>
+</div>
+</div>
+</div>
+<div class="section" id="a-treatment-of-stars">
+<h2>A Treatment of Stars<a class="headerlink" href="#a-treatment-of-stars" title="Permalink to this headline">¶</a></h2>
+<p>We are now talking about slabs at a radius <span class="math notranslate nohighlight">\(r\)</span> from the center of the star in the direction <span class="math notranslate nohighlight">\(\hat z\)</span>. The slab thickness is thus <span class="math notranslate nohighlight">\(dz\)</span>. We have:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{dI(z,\theta)}{ds} = \frac{\cos\theta \cdot \mathrm{d}I(z,\theta)}{\mathrm{d}z}
+\]</div>
+<p>Note we are implicitly assuming that the density is constant here, which in exotic cases, is not true.</p>
+<p>So….how the hell do we progress?  Let’s</p>
+<ul class="simple">
+<li><p>Assume a blackbody at tempertature <span class="math notranslate nohighlight">\(T \rightarrow\)</span> we can say that the source function is uniform in all directions (locally). Note that the lower the mass, and the cooler the star, the more this assumption breaks down. This gives us, where <span class="math notranslate nohighlight">\(S(T)\)</span> is the Planck Fucntion, that:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+I(z,\theta) = S(T) - \frac{\cos\theta}{\kappa \rho}\frac{\mathrm{d}I(z,\theta)}{\mathrm{d}z}
+\]</div>
+<ul class="simple">
+<li><p>Note that we can solve this equation by assuming that <span class="math notranslate nohighlight">\(I(z,\theta) = B(T) + \underbrace{\epsilon I(z,\theta)}_\text{small perturbation}\)</span>. Fundamentally, after treating this as a perturbation, we end up with:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[
+H_\nu = \int I(z,\theta)\cos\theta \mathrm{d}\Omega = \int \left(B(T) - \frac{\cos\theta}{\kappa \rho} \frac{dB(T)}{dz}\cos\theta \right)\mathrm{d}\Omega
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+H_\nu = \int \left(\underbrace{B(T)}_\text{integral goes to 0} - \frac{\cos\theta}{\kappa \rho} \frac{dB(T)}{dz}\cos\theta \right)\mathrm{d}\Omega
+\]</div>
+<div class="math notranslate nohighlight">
+\[
+H_\nu = -\frac{2\pi}{\kappa \rho} \frac{dB(T)}{dz}\int_0^\pi \cos^2\theta \sin\theta \mathrm{d}\theta
+\]</div>
+<p>This becomes:</p>
+<div class="math notranslate nohighlight">
+\[
+H_\nu = -\frac{4\pi}{3\kappa \rho} \frac{dB(T)}{dz} = -\frac{4\pi}{3\kappa\rho}\frac{\partial B}{\partial T}\frac{\partial T}{\partial z}
+\]</div>
+<p>And the total flux is thus:</p>
+<div class="math notranslate nohighlight">
+\[
+H = -\frac{4\pi}{3\rho} \frac{\partial T}{\partial z} \int_0^\infty \frac{1}{\kappa}\frac{\partial B(T)}{\partial T}\mathrm{d}\nu
+\]</div>
+<p>Note that the integral is <strong>nasty.</strong> The opacity is a <strong>WILD FUNCTION</strong> of quantum mechanics, resonances, etc. Almost always, things like MESA hide the complexity of microphysics in the integral.</p>
+<p>We want to hide this nastiness, and how do we make this tractable? Let’s define a quantity called the <strong>Rosseland Mean Opacity</strong> <span class="math notranslate nohighlight">\(\kappa_R\)</span> such that:</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{1}{\kappa_R} \equiv \frac{\int_0^\infty \frac{1}{\kappa}\frac{\partial B(T)}{\partial T}\mathrm{d}\nu}{\int_0^{\infty} \frac{\partial B(T)}{\partial T} \mathrm{d}\nu} = \frac{\pi}{4\sigma T^3}\int_0^\infty \frac{1}{\kappa}\frac{\partial B(T)}{\partial T}\mathrm{d}\nu
+\]</div>
+<p>This can be thought of as a mean transparency, or so, and often ignore the complex treatments underneath. This is normally fine for stuctures, but not for specific spectra in atmospheres. When we do this, we can go back to the <strong>total flux per unit area of a shell from a star</strong>:</p>
+<div class="math notranslate nohighlight">
+\[
+\boxed{H = -\frac{16\sigma T^3}{3\kappa_R \rho}\frac{\partial T}{\partial z}}
+\]</div>
+<p>What we actually observe is integrated over the full sphere:</p>
+<div class="math notranslate nohighlight">
+\[
+\boxed{L(r) = -4\pi r^2 \frac{16 \sigma T^3}{3\kappa_R \rho}\frac{dT}{dz}}
+\]</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./pages"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="equationsofstate.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Virial Theorem and the Equation of State</p>
+        </div>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Jacob Pilawa<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

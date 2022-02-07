@@ -53,6 +53,7 @@
     <script async="async" src="../_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Energy Transport in Stars" href="radiativetransfer.html" />
     <link rel="prev" title="Hydrostatic Equilibrium: A Deep Dive" href="hydrostaticequilibrium.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -111,6 +112,11 @@
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    Virial Theorem and the Equation of State
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="radiativetransfer.html">
+   Energy Transport in Stars
   </a>
  </li>
 </ul>
@@ -281,13 +287,6 @@
        Degenerate, Relativistic Electron Case
       </a>
      </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#plot">
-     Plot
-    </a>
-    <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#relativistic-transition">
        Relativistic Transition
@@ -298,7 +297,22 @@
        Degeneracy Transition FOR ELECTRONS
       </a>
      </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#relativistic-bosons">
+       Relativistic Bosons
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#why-do-we-care-about-equations-of-state-pressure">
+       Why do we care about Equations of State/Pressure?
+      </a>
+     </li>
     </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#plot">
+     Plot
+    </a>
    </li>
   </ul>
  </li>
@@ -403,13 +417,6 @@
        Degenerate, Relativistic Electron Case
       </a>
      </li>
-    </ul>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#plot">
-     Plot
-    </a>
-    <ul class="nav section-nav flex-column">
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#relativistic-transition">
        Relativistic Transition
@@ -420,7 +427,22 @@
        Degeneracy Transition FOR ELECTRONS
       </a>
      </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#relativistic-bosons">
+       Relativistic Bosons
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#why-do-we-care-about-equations-of-state-pressure">
+       Why do we care about Equations of State/Pressure?
+      </a>
+     </li>
     </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#plot">
+     Plot
+    </a>
    </li>
   </ul>
  </li>
@@ -777,10 +799,6 @@ P_{e} = \mathcal{K}_{ER} \left(\frac{\rho}{\mu_e}\right)^{4/3}
 \]</div>
 <p>where  <span class="math notranslate nohighlight">\(\mathcal{K}_{ER} = 1.24\times 10^{15} \frac{\text{dyne}}{\text{cm}^2} \left(\frac{g}{cm^3}\right)^{-4/3}\)</span> .</p>
 </div>
-</div>
-<div class="section" id="plot">
-<h3>Plot<a class="headerlink" href="#plot" title="Permalink to this headline">¶</a></h3>
-<a class="reference internal image-reference" href="../_images/eos.png"><img alt="fig10" class="align-center" src="../_images/eos.png" style="width: 600px;" /></a>
 <div class="section" id="relativistic-transition">
 <h4>Relativistic Transition<a class="headerlink" href="#relativistic-transition" title="Permalink to this headline">¶</a></h4>
 <p>How do we identify the transition point between cases? Let’s try to calculate <span class="math notranslate nohighlight">\(\rho\)</span> where <span class="math notranslate nohighlight">\(p \approx m_e c \sim h \left(\frac{3}{8\pi} n_e\right)^{1/3}\)</span> . This gives:</p>
@@ -814,6 +832,50 @@ P_e = max\left(\underbrace{\frac{\rho kT}{\mu_e m_p}}_\text{thermal pressure}, \
 <p>We can add this to our diagram, with an example of where WDs might fall:</p>
 <a class="reference internal image-reference" href="../_images/wd_eos_example.png"><img alt="fig11" class="align-center" src="../_images/wd_eos_example.png" style="width: 600px;" /></a>
 </div>
+<div class="section" id="relativistic-bosons">
+<h4>Relativistic Bosons<a class="headerlink" href="#relativistic-bosons" title="Permalink to this headline">¶</a></h4>
+<p>Let’s start with momentum distributions:</p>
+<div class="math notranslate nohighlight">
+\[
+n(p) dp = \frac{2}{h^3}\frac{1}{e^{-\frac{\epsilon p}{kt}}-1}4\pi p^2 \mathrm{d}p
+\]</div>
+<p>Let’s take the photon case, where <span class="math notranslate nohighlight">\(\epsilon = pc = h\nu\)</span>. In LTE, we have:</p>
+<div class="math notranslate nohighlight">
+\[
+n(\nu) d\nu = \frac{8\pi}{c^3}\frac{\nu^2 d\nu}{e^{\frac{h\nu}{kT}} - 1}
+\]</div>
+<p>For photons, we find:</p>
+<div class="math notranslate nohighlight">
+\[
+n_{ph} = bT^3
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(b = 20.3\)</span> 1/(cm^3 K^3).</p>
+<p>We also have the internal radiation energy:</p>
+<div class="math notranslate nohighlight">
+\[
+U_{rad} = aT^4
+\]</div>
+<p>And thus the radiation pressure is</p>
+<div class="math notranslate nohighlight">
+\[
+P_{rad} = \frac13 aT^3
+\]</div>
+<p>where <span class="math notranslate nohighlight">\(a = \frac{8\pi^5 k^4}{15 h^2 c^3} = 7.6\times 10^{-15}\)</span> ergs/cm^3/K^4.</p>
+<p>We can now complete our diagram from last time:</p>
+<ul class="simple">
+<li><p>Radiative pressure is more important for high mass stars</p></li>
+<li><p>Low mass stars, you might have to worry about degeneracy pressure</p></li>
+<li><p>Most stars are pretty much ideal gases.</p></li>
+</ul>
+</div>
+<div class="section" id="why-do-we-care-about-equations-of-state-pressure">
+<h4>Why do we care about Equations of State/Pressure?<a class="headerlink" href="#why-do-we-care-about-equations-of-state-pressure" title="Permalink to this headline">¶</a></h4>
+<p>The pressure is what holds up the star.</p>
+</div>
+</div>
+<div class="section" id="plot">
+<h3>Plot<a class="headerlink" href="#plot" title="Permalink to this headline">¶</a></h3>
+<a class="reference internal image-reference" href="../_images/eos.png"><img alt="fig10" class="align-center" src="../_images/eos.png" style="width: 600px;" /></a>
 </div>
 </div>
 </div>
@@ -849,6 +911,13 @@ P_e = max\left(\underbrace{\frac{\rho kT}{\mu_e m_p}}_\text{thermal pressure}, \
             <p class="prev-next-subtitle">previous</p>
             <p class="prev-next-title">Hydrostatic Equilibrium: A Deep Dive</p>
         </div>
+    </a>
+    <a class='right-next' id="next-link" href="radiativetransfer.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Energy Transport in Stars</p>
+    </div>
+    <i class="fas fa-angle-right"></i>
     </a>
 </div>
             
