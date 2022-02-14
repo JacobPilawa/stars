@@ -165,6 +165,148 @@ $$
 Our temperature gradient is:
 
 $$
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \frac{dT}{dm} = \underbrace{\frac{dP}{dm}}_{\text{from HE, }=\frac{GM}{4\pi r^2}}\frac{dT}{dP} 
 $$
 Substitute in:
@@ -274,3 +416,120 @@ Consider a blob of gas with some radius $r$, some pressure $P(r)$, and some dens
 
 
 In this end, this will lead to an expression for $dP/dr$ and $dT/dr$ under these conditions, giving an equivalent $\nabla_{ad}$. We then compare the two gradients, and whichever is more efficient will win!
+
+
+
+
+### The Basic Questions
+
+* We don't really understand convection. We need to know _where_ convection happens.
+
+Our problem last time: we have a blob of gas with some properties. This blob moves somewhere else (different ambient conditions), how does it respond?
+
+* In the case when $\rho_{internal} < \rho(r+dr)$, we get a new upward force. This is an **instability**. 
+* When $\rho_{internal} > \rho_{ambient}$, then we have a net downward force. 
+
+
+```{image} ../figures/conv.png
+:alt: conv
+:width: 600px
+:align: center
+```
+
+All we need to do is figure out the internal density. Starting with the ideal gas law:
+
+$$
+P = \frac{\rho}{\mu} T \mathcal{R} \text{ where } \mathcal{R} \equiv 3.8\times 10^{7} \frac{\text{g}\text{cm}^2}{\text{s}^2 \text{ K} \text{ mole}} \equiv \frac{\text{erg}}{\text{K} \text{ Mole}}
+$$
+
+Let's take a derivative, assuming a constant $\mu$:
+
+$$
+\frac{dP}{dr} = \frac{\mathcal{R}}{\mu} \left(\rho \frac{dT}{dr} + T\frac{d\rho}{dr}\right)
+$$
+Plugging back in for $\rho$ in terms of pressure and temperature. 
+
+
+$$
+\frac{dP}{dr} = = \left(\frac{P}{T}\frac{dT}{dr} + \frac{P}{\rho}\frac{d\rho}{dr}\right)
+$$
+
+We now have to **assume that the gas is adiabatic**. Then, by definition, we have: $P = \mathcal{K} \rho^\gamma$. We can now plug this in to hopefully get rid of the density dependence above.
+
+Taking the derivative:
+
+$$
+\frac{dP}{dr} = \mathcal{K}\gamma \rho^{\gamma-1} \frac{d\rho}{dr} \rightarrow \frac{dP}{dr} = \gamma \frac{P}{\rho} \frac{d\rho}{dr}
+$$
+
+
+Combine our two equations (ideal gas + adiabatic gas conditions), then solve for the tempearture gradient:
+
+Setting the two pressure gradients equal:
+
+$$
+\gamma \frac{P}{\rho} \frac{d\rho}{dr} = \left(\frac{P}{T}\frac{dT}{dr} + \frac{P}{\rho}\frac{d\rho}{dr}\right)
+$$
+Simplifying:
+
+$$
+\frac{dT}{dr} = \left(\gamma-1\right)\frac{P}{\rho}\left(\frac{d\rho}{dr}\right)\frac{T}{P} = (\gamma-1)\frac{T}{\rho}\frac{d\rho}{dr}
+$$
+
+Swapping for pressure:
+
+$$
+\frac{dT}{dr}= \boxed{\underbrace{\frac{\gamma-1}{\gamma}\frac{T}{P}\frac{dP}{dr} \equiv \left(\frac{dT}{dr}\right)_{ad}}_\text{adiabatic temperature gradient}}
+$$
+
+The next steps are very messy, but we basically write $F=ma$ with densities. Fundamentally, we idenify that:
+
+
+#### Condition for the Instability and Hence Convection
+
+* This condition is met when:
+
+$$
+\boxed{\frac{dT}{dr} < \left(\frac{dT}{dr}\right)_{ad} \rightarrow \text{Convection.}}
+$$
+
+Conceptually, this is confusing because of the signs. We can re-write these conditions to be more intuitive:
+
+$$
+\boxed{\Bigg| \frac{dT}{dr}\Bigg| > \Bigg|\frac{dT}{dr}\Bigg|_{ad}}
+$$
+
+**This basically says that if the true temperature gradient is STEEPER than the adiabatic condition, we get convection.**
+
+
+Remember earlier we had:
+
+
+$$
+\nabla \equiv \frac{d\ln T}{d\ln P}
+$$
+
+When we had this expression, we flip signs and require for convection (same idea as above but with a sign flip). 
+
+$$
+\boxed{\nabla > \nabla_{ad}}
+$$
+
+#### Some notes:
+
+The condition:
+
+$$
+\boxed{\frac{\gamma-1}{\gamma} < \frac{3 \kappa_R L(r) P }{16 \pi ac G m T^4} \rightarrow \text{ Convection}}
+$$
+
+* If $\kappa_R$ increases, we have more convection.
+* When $L/M$ (energy generation efficiency) increases, we are also more convective. 
+
+```{image} ../figures/convvsrad.png
+:alt: convvsrad
+:width: 600px
+:align: center
+```
+
+
