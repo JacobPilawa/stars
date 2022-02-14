@@ -8,3 +8,4 @@ chapters:
 - file: pages/hydrostaticequilibrium
 - file: pages/equationsofstate
 - file: pages/radiativetransfer
+- file: pages/polytropes

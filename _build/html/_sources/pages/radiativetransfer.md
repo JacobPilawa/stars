@@ -532,4 +532,108 @@ $$
 :align: center
 ```
 
+## Homologous Stars
+
+Here's an exercise useful for scaling relations. We will treat all differentials as differences. We want scaling relations between parameters.  We will treat $\rho \sim \frac{M}{R^3}$. 
+
+```{admonition} Hydrostatic Equilibrium
+
+$$
+P \sim \frac{GM^2}{R^4}
+$$
+
+```
+
+```{admonition} Ideal Gas Law
+
+$$
+T \sim \frac{\mu GM}{R}
+$$
+
+```
+
+```{admonition} Energy Transport (Radiative Star)
+
+$$
+L \sim \frac{R^2}{\kappa \rho}\frac{T^4}{R}
+$$
+
+```
+
+```{admonition} Opacity
+
+$$
+\kappa \sim \rho^{n} T^{-\alpha}
+$$
+
+which is true for many forms of the opacity. 
+
+```
+
+Starting with the luminosity:
+
+$$
+L \sim R^2 \underbrace{\frac{R^3}{M}}_{\rho} \underbrace{\left(\frac{R^3}{M}\right)^n \left(\frac{\mu G M}{R}\right)^{\alpha}}_{\kappa} \underbrace{\left(\frac{\mu GM}{R}\right)^{4}}_{T^4} \frac{1}{R}
+$$
+
+We are left with things that we can measure! Collecting our terms:
+
+$$
+\boxed{L \sim \mu^{\alpha+4} R^{3n-\alpha} M^{\alpha+3-n}}
+$$
+
+This is great for quick, order-of-magnitude calculations.
+
+### Examples
+
+#### Kramer's Opacity (Free-Free Opacity) + Ideal Gas
+
+Here, we have: $\alpha=7/2$ and $n=1$. In this case, we have:
+
+$$
+\boxed{L \sim \mu^{7.5} R^{-1/2} M^{5.5}}
+$$
+If the whole star is dominated by Kramer's opacity, 
+
+#### Thomson Opacity
+
+In this case, the opacity is constant and we have:
+
+$$
+L \sim \mu^{4} M^3
+$$
+
+Thomson opacity is appropriate for the most massive stars. 
+
+#### Radiation Pressure and Thomson Opacity
+
+Here, we have:
+
+$$
+P \sim P_R \sim \frac{GM^2}{R^4}
+$$
+
+And thus:
+
+$$
+L \sim R^2 \frac{R^3}{M} \frac{GM^2}{R^5} \sim M
+$$
+
+These are the most massive stars where radiation pressure matters. We have linear relation between mass and luminosity. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
