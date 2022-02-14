@@ -302,6 +302,35 @@
    </li>
   </ul>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#homologous-stars">
+   Homologous Stars
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#examples">
+     Examples
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#kramer-s-opacity-free-free-opacity-ideal-gas">
+       Kramer’s Opacity (Free-Free Opacity) + Ideal Gas
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#thomson-opacity">
+       Thomson Opacity
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#radiation-pressure-and-thomson-opacity">
+       Radiation Pressure and Thomson Opacity
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
 </ul>
 
             </nav>
@@ -413,6 +442,35 @@
      <li class="toc-h4 nav-item toc-entry">
       <a class="reference internal nav-link" href="#some-notes">
        Some notes:
+      </a>
+     </li>
+    </ul>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#homologous-stars">
+   Homologous Stars
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#examples">
+     Examples
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#kramer-s-opacity-free-free-opacity-ideal-gas">
+       Kramer’s Opacity (Free-Free Opacity) + Ideal Gas
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#thomson-opacity">
+       Thomson Opacity
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#radiation-pressure-and-thomson-opacity">
+       Radiation Pressure and Thomson Opacity
       </a>
      </li>
     </ul>
@@ -746,6 +804,85 @@ P = \frac{\rho}{\mu} T \mathcal{R} \text{ where } \mathcal{R} \equiv 3.8\times 1
 <li><p>When <span class="math notranslate nohighlight">\(L/M\)</span> (energy generation efficiency) increases, we are also more convective.</p></li>
 </ul>
 <a class="reference internal image-reference" href="../_images/convvsrad.png"><img alt="convvsrad" class="align-center" src="../_images/convvsrad.png" style="width: 600px;" /></a>
+</div>
+</div>
+</div>
+<div class="section" id="homologous-stars">
+<h2>Homologous Stars<a class="headerlink" href="#homologous-stars" title="Permalink to this headline">¶</a></h2>
+<p>Here’s an exercise useful for scaling relations. We will treat all differentials as differences. We want scaling relations between parameters.  We will treat <span class="math notranslate nohighlight">\(\rho \sim \frac{M}{R^3}\)</span>.</p>
+<div class="admonition-hydrostatic-equilibrium admonition">
+<p class="admonition-title">Hydrostatic Equilibrium</p>
+<div class="math notranslate nohighlight">
+\[
+P \sim \frac{GM^2}{R^4}
+\]</div>
+</div>
+<div class="admonition-ideal-gas-law admonition">
+<p class="admonition-title">Ideal Gas Law</p>
+<div class="math notranslate nohighlight">
+\[
+T \sim \frac{\mu GM}{R}
+\]</div>
+</div>
+<div class="admonition-energy-transport-radiative-star admonition">
+<p class="admonition-title">Energy Transport (Radiative Star)</p>
+<div class="math notranslate nohighlight">
+\[
+L \sim \frac{R^2}{\kappa \rho}\frac{T^4}{R}
+\]</div>
+</div>
+<div class="admonition-opacity admonition">
+<p class="admonition-title">Opacity</p>
+<div class="math notranslate nohighlight">
+\[
+\kappa \sim \rho^{n} T^{-\alpha}
+\]</div>
+<p>which is true for many forms of the opacity.</p>
+</div>
+<p>Starting with the luminosity:</p>
+<div class="math notranslate nohighlight">
+\[
+L \sim R^2 \underbrace{\frac{R^3}{M}}_{\rho} \underbrace{\left(\frac{R^3}{M}\right)^n \left(\frac{\mu G M}{R}\right)^{\alpha}}_{\kappa} \underbrace{\left(\frac{\mu GM}{R}\right)^{4}}_{T^4} \frac{1}{R}
+\]</div>
+<p>We are left with things that we can measure! Collecting our terms:</p>
+<div class="math notranslate nohighlight">
+\[
+\boxed{L \sim \mu^{\alpha+4} R^{3n-\alpha} M^{\alpha+3-n}}
+\]</div>
+<p>This is great for quick, order-of-magnitude calculations.</p>
+<div class="section" id="examples">
+<h3>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="kramer-s-opacity-free-free-opacity-ideal-gas">
+<h4>Kramer’s Opacity (Free-Free Opacity) + Ideal Gas<a class="headerlink" href="#kramer-s-opacity-free-free-opacity-ideal-gas" title="Permalink to this headline">¶</a></h4>
+<p>Here, we have: <span class="math notranslate nohighlight">\(\alpha=7/2\)</span> and <span class="math notranslate nohighlight">\(n=1\)</span>. In this case, we have:</p>
+<div class="math notranslate nohighlight">
+\[
+\boxed{L \sim \mu^{7.5} R^{-1/2} M^{5.5}}
+\]</div>
+<p>If the whole star is dominated by Kramer’s opacity,</p>
+</div>
+<div class="section" id="thomson-opacity">
+<h4>Thomson Opacity<a class="headerlink" href="#thomson-opacity" title="Permalink to this headline">¶</a></h4>
+<p>In this case, the opacity is constant and we have:</p>
+<div class="math notranslate nohighlight">
+\[
+L \sim \mu^{4} M^3
+\]</div>
+<p>Thomson opacity is appropriate for the most massive stars.</p>
+</div>
+<div class="section" id="radiation-pressure-and-thomson-opacity">
+<h4>Radiation Pressure and Thomson Opacity<a class="headerlink" href="#radiation-pressure-and-thomson-opacity" title="Permalink to this headline">¶</a></h4>
+<p>Here, we have:</p>
+<div class="math notranslate nohighlight">
+\[
+P \sim P_R \sim \frac{GM^2}{R^4}
+\]</div>
+<p>And thus:</p>
+<div class="math notranslate nohighlight">
+\[
+L \sim R^2 \frac{R^3}{M} \frac{GM^2}{R^5} \sim M
+\]</div>
+<p>These are the most massive stars where radiation pressure matters. We have linear relation between mass and luminosity.</p>
 </div>
 </div>
 </div>
